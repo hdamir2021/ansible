@@ -1,0 +1,14 @@
+---
+- name: install  mysql
+  hosts: ubuntu 
+  become: yes
+  tasks:
+  - name: Install MySQL community server
+    yum:	
+      name: mysql-community-server
+      state: present
+  - name: Mysql Services
+    service:
+      name: mysqld
+      state: started
+      enabled: yes

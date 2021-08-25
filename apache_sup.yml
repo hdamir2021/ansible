@@ -1,0 +1,9 @@
+---
+- name: install and start apache
+  hosts: centos 
+  become: yes
+  tasks:
+  - name: Latest apache version installation
+    yum:	
+      name: httpd
+      state: absent
