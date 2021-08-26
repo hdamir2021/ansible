@@ -1,0 +1,10 @@
+---
+- name: Install MariaDb Server
+  hosts: demo_servers
+  become: yes
+  tasks:
+  - name: Install MariaDb qd RAM > 900M
+    yum:
+      name: mariadb-srver
+      state: latest
+    when: ansible_memtotal_mb > 900

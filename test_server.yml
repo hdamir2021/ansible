@@ -1,0 +1,12 @@
+---
+- name: install index.html
+  hosts: centos
+  become: yes
+  tasks:
+  - name: Install index.html template joue le role que copy mais en interpretant les variables
+    template:
+     src: index.html.j2
+     dest: /var/www/html/index.html
+     mode: 0644
+     owner: apache
+     group: apache
