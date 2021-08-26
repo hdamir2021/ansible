@@ -1,0 +1,10 @@
+---
+- name: Check service httpd
+  hosts: centos
+  become: yes
+  tasks:
+  - name: Started
+    service:
+      name: "{{service}}" 
+      state: restarted 
+

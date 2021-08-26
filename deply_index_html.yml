@@ -1,0 +1,7 @@
+---
+- name: Deploy index.html to webservers
+  hosts: centos
+  become: yes
+  tasks:
+  - name: Copy index.html
+    copy: src="{{stage}}_index.html" dest=/var/www/html/index.html

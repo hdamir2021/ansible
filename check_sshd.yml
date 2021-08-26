@@ -1,0 +1,9 @@
+---
+- name: Check service httpd
+  hosts: demo_servers 
+  become: yes
+  tasks:
+  - name: Check 
+    service:
+      name: "{{service}}" 
+      state: restarted 
