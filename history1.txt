@@ -1,0 +1,685 @@
+    1  sudo -s
+    2  su -
+    3  exit
+    4  sudo -s
+    5  ssh vagrant@10.0.0.21
+    6  sudo -s
+    7  ssh vagrant@10.0.0.21
+    8  ssh vagrant@10.0.0.31
+    9  vi /etc/hosts
+   10  sudo -s
+   11  ssh vagrant/etc/ssh/sshd_config 
+   12  ssh vagrant@10.0.0.31
+   13  ssh vagrant@10.0.0.21
+   14  ssh vagrant@10.0.0.31
+   15  exit
+   16  ssh vagrant@10.0.0.31
+   17  cd
+   18  ls
+   19  ls -altr
+   20  cd .ssh/
+   21  ls
+   22  cat authorized_keys 
+   23  vi authorized_keys 
+   24  ssh vagrant@10.0.0.31
+   25  vi authorized_keys 
+   26  ssh vagrant@10.0.0.31
+   27  vi /etc/hosts
+   28  sudo systemctl restart sshd
+   29  ssh vagrant@10.0.0.31
+   30  vi authorized_keys 
+   31  cd
+   32  ip a
+   33  ifconfig 
+   34  ping 10.0.0.21
+   35  ping 10.0.0.31
+   36  ssh_keygen
+   37  ssh-keygen
+   38  pwd
+   39  cd .ssh
+   40  ls -altr
+   41  cat id_rsa
+   42  ls -altr
+   43  pwd
+   44  scp -rp id_rsa.pub vagrant@ubuntu01:/home/vagrant/.ssh/
+   45  scp -rp id_rsa.pub vagrant@10.0.0.21:/home/vagrant/.ssh/
+   46  scp -rp id_rsa.pub vagrant@10.0.0.31:/home/vagrant/.ssh/
+   47  ssh vagrant@10.0.0.21
+   48  ssh vagrant@10.0.0.31
+   49  exit
+   50  cd /etc/ansible/
+   51  ls -altr
+   52  vi hosts 
+   53  q!
+   54  sudo vi hosts 
+   55  ansible all -m ping
+   56  vi hosts 
+   57  ansible all -m ping
+   58  ansible all -u vagrant -m ping
+   59  ansible demo_servers -u vagrant -m ping
+   60  ansible all -m ping -u vagrant --ask-pass
+   61  ls
+   62  vi ansible.cfg 
+   63  sudo vi ansible.cfg 
+   64  ansible demo_servers -u vagrant -m ping
+   65  ls -altr
+   66  cp -rp hosts hosts_orig
+   67  sudo cp -rp hosts hosts_orig
+   68  ls -altr
+   69  sudo cp -rp ansible.cfg ansible.cfg_orig
+   70  vi hosts
+   71  sudo vi hosts
+   72  sudo vi ansible.cfg
+   73  sudo ansible all -m ping
+   74  sudo vi ansible.cfg
+   75  vsudo vi hosts
+   76  sudo vi hosts
+   77  exit
+   78  cd /etc/ansible/
+   79  ls
+   80  sudo vi hosts
+   81  sudo ansible all -m ping
+   82  sudo vi hosts
+   83  sudo ansible all -m ping
+   84  sudo vi hosts
+   85  sudo ansible all -m ping
+   86  sudo vi hosts
+   87  exit
+   88  csudo ansible all -m ping
+   89  cd /etc/ansible/
+   90  ls
+   91  sudo vi hosts
+   92  sudo ansible all -m ping
+   93  sudo vi hosts
+   94  sudo ansible all -m ping
+   95  sudo vi hosts
+   96  sudo ansible all -m ping
+   97  sudo vi hosts
+   98  sudo ansible all -m ping
+   99  ssh vagrant@10.0.0.21
+  100  sudo vi hosts
+  101  vi ansible.cfg
+  102  cat ansible.cfg
+  103  sudo vi hosts
+  104  sudo ansible all -m ping
+  105  ls -altr
+  106  sudo rm -rf ansible.cfg hosts
+  107  ls -altr
+  108  sudo mv hosts_orig hosts
+  109  sudo mv ansible.cfg_orig ansible.cfg
+  110  sudo rm -rf ansible.cfg hosts
+  111  ls -altr
+  112  sudo vi hosts
+  113  sudo vi ansible.cfg
+  114  ls -altr
+  115  sudo ansible all -m ping
+  116  ls -altr
+  117  sudo ansible all -m ping
+  118  ls -altr
+  119  sudo vi hosts
+  120  sudo ansible all -m ping
+  121  sudo vi ansible.cfg
+  122  sudo ansible all -m ping
+  123  sudo vi ansible.cfg
+  124  ls -altr
+  125  cat hosts 
+  126  ls -altr
+  127  sudo cp -rp hosts ansible.cfg_1
+  128  sudo cp -rp ansible.cfg hosts_1
+  129  ls -altr
+  130  sudo mkdir save
+  131  sudo mv hosts ansible.cfg ave
+  132  sudo mv hosts ansible.cfg save
+  133  ls -altr
+  134  sudo mv ansible.cfg_1 ansible.cfg
+  135  sudo mv hosts_1 hosts
+  136  ls -altr
+  137  sudo ansible all -m ping
+  138  cat hosts 
+  139  vi /etc/hosts
+  140  ping ansible_node01
+  141  cat hosts 
+  142  sudo vi hosts 
+  143  ping ansible_node01
+  144  sudo ansible all -m ping
+  145  set -o vi
+  146  ssh vagrant@10.0.0.21
+  147  ssh vagrant@10.0.0.31
+  148  sudo ansible all -m ping
+  149  sudo vi hosts 
+  150  sudo ansible all -m ping -u vagrant 
+  151  sudo vi ansible.cfg 
+  152  vsudo vi hosts 
+  153  sudo vi hosts 
+  154  sudo ansible all -m ping -u vagrant 
+  155  sudo vi hosts 
+  156  sudo vi ansible.cfg 
+  157  sudo ansible all -m ping -u vagrant 
+  158  ping 10.0.0.21
+  159  ls -altr
+  160  ansible ansible  demo_servers -m ping
+  161   ansible  demo_servers -m ping
+  162  ansible all -m ping -u vagrant 
+  163  sudo ansible all -m ping -u vagrant 
+  164  sudo vi hosts 
+  165   ansible all -m ping -u vagrant 
+  166  sudo vi ansible.cfg 
+  167   ansible all -m ping -u vagrant 
+  168  sudo vi ansible.cfg 
+  169   ansible all -m ping -u vagrant 
+  170  sudo vi ansible.cfg 
+  171   ansible all -m ping -u vagrant 
+  172  vi ansible.cfg 
+  173  ansible-config dump
+  174  !
+  175  ansible-config view
+  176  !
+  177  ansible-config lis
+  178  !
+  179  ansible-config view
+  180  !
+  181  cat hosts 
+  182   ansible all -m ping -u vagrant 
+  183  vi ansible.cfg 
+  184  cat hosts 
+  185  vi /etc/hosts
+  186  vi ansible.cfg 
+  187  pwd
+  188  ls -altr
+  189  sudo cp -rp ansible.cfg ansible.cfg_old
+  190  ls -altr
+  191  cd
+  192  pwd
+  193  vi ansible.cfg
+  194  ls altr
+  195  ls -altr
+  196  vi ansible.cfg 
+  197  ansible-config view
+  198  ansible-config dump
+  199  !
+  200  ansible-config dump
+  201  !
+  202  ansible-config list
+  203  !
+  204  vi ansible.cfg 
+  205  view
+  206  viw ansible.cfg 
+  207  vi hosts
+  208   ansible all -m ping -u vagrant 
+  209  vi hosts
+  210   ansible all -m ping -u vagrant 
+  211  vi hosts
+  212   ansible all -m ping -u vagrant 
+  213  ansible -m ping all
+  214  ansible -m ping centos
+  215  ansible -m ping ubuntu
+  216  ansible -m ping ubuntu01
+  217  ansible -m psetup ubuntu01
+  218  ansible -m setup ubuntu01
+  219  ansible all -m setup -a "filter=ansible_distribution*"
+  220  cd /etc/ansible/a/hosts
+  221  cd /etc/ansible/a/
+  222  cd /etc
+  223  cd ansible/
+  224  ls -altr
+  225  vi hosts 
+  226  vi ansible.cfg
+  227  ls
+  228  ansible-inventory -i inventory --list
+  229  pwd
+  230  ls
+  231  cd
+  232  ls
+  233  ansible-inventory -i inventory --list
+  234  ansible-doc -t inventory -l
+  235  !
+  236  ansible-config view
+  237  ansible-inventory -i inventory --list
+  238  ansible '10.0.0.21' -m ping all
+  239  ansible '10.0.0.21,' -m ping all
+  240  ansible -i '10.0.0.21,' -m ping all
+  241  ansible -m ping ubuntu
+  242  ansible-cmdbout/
+  243  ansible-cmdb out/
+  244  ansible -m ping ubuntu
+  245  vi /etc/ansible/ansible.cfg
+  246  cat hosts 
+  247  vi /etc/ansible/ansible.cfg
+  248  ansible all -m setup -a "filter=ansible_distribution*"
+  249  ansible all -m setup -a "filter=ansible_eth1"
+  250  ansible all -m setup -a "filter=ansible_distribution*"
+  251  ansible all -m setup -a "gathe_subset=network"
+  252  ansible all -m setup -a "gather_subset=network"
+  253  ssh ububntu@
+  254  sudo vi /etc/ssh/sshd_config 
+  255  ssh ububntu@10.0.0.31
+  256  sudo vi /etc/ssh/sshd_config 
+  257  sudo systemctl restart sshd
+  258  sudo vi /etc/ssh/sshd_config 
+  259  sudo systemctl restart sshd
+  260  ssh ubuntu@10.0.0.31
+  261  ansible ubuntu01 -m ping -u ubuntu --ask-pass
+  262  ansible ubuntu -m ping -u ubuntu --ask-pass
+  263  cat hosts
+  264  ansible ubuntu -m shell -a 'fdisk -l' -u ubuntu --become -k
+  265  ansible ubuntu -m ping -u ubuntu
+  266  cat hosts
+  267  ansible ubuntu -m ping -u ubuntu
+  268  vi hosts
+  269  ansible ubuntu -m ping -u ubuntu -
+  270  ansible ubuntu -m ping -u ubuntu --ask-pass
+  271  vi hosts 
+  272  ansible ubuntu -m ping -u ubuntu 
+  273  ansible ubuntu -m ping -u ubuntu --ask pass
+  274  ansible ubuntu -m ping -u ubuntu --ask-pass
+  275  ansible ubuntu -m ping -u ubuntu --k
+  276  ansible ubuntu -m ping -u ubuntu -k
+  277  ansible -a "/sbin/reboot" -f 1
+  278  ansible ubuntu -a "/sbin/reboot" -f 1
+  279  ansible centos -a "/sbin/reboot" -f 1
+  280  cat /etc/host
+  281  cat /etc/hosts
+  282  ansible all -a "/sbin/reboot" -f 1
+  283  vi hosts 
+  284  vi hosts ansible hosts -a "sudo /sbin/reboot" -f 5 -u user-vvvv --ask-become-pass
+  285   ansible all -a "sudo /sbin/reboot" -f 5 -u user-vvvv --ask-become-pass
+  286   ansible all -a "sudo /sbin/reboot" -f 5 -u vagrant --ask-become-pass
+  287  ansible all -a "sudo /sbin/reboot" -f 1
+  288  exit
+  289  pwd
+  290  ls
+  291  cd ansible/
+  292  pwd
+  293  ls
+  294  du -a group_vars/
+  295  du -a host_vars/
+  296  cat hosts
+  297  ls
+  298  cp -rp index.html index.html_lab2
+  299  vi index.html
+  300  vi index_index_html
+  301  vi prod_index.html
+  302  ls
+  303  cd group_vars/
+  304  ls
+  305  cat webserver 
+  306  ls
+  307  vi centos
+  308  ls
+  309  rm webserver 
+  310  ls
+  311  cd ../host_vars/
+  312  vi centos01
+  313  pwd
+  314  cd ..
+  315  ls -altr
+  316  cp -rp prod_index.html dev_index.html
+  317  vi dev_index.html 
+  318  cat host_vars/centos01 
+  319  vi host_vars/centos01
+  320  cat host_vars/centos01 
+  321  cat group_vars/centos 
+  322  cat host_vars/centos01
+  323  cat group_vars/centos
+  324  vi deply_index_html.yml
+  325  ls
+  326  ls -altr
+  327  vi deply_index_html.yml 
+  328  ansible-playbook deply_index_html.yml  --syntax-check
+  329  vi deply_index_html.yml 
+  330  ansible-playbook deply_index_html.yml  --syntax-check
+  331  vi deply_index_html.yml 
+  332  ansible-playbook deply_index_html.yml  --syntax-check
+  333  vi deply_index_html.yml 
+  334  ansible-playbook deply_index_html.yml  --syntax-check
+  335  vi deply_index_html.yml 
+  336  ansible-playbook deply_index_html.yml  --syntax-check
+  337  vi deply_index_html.yml 1
+  338  ansible-playbook deply_index_html.yml  --syntax-check
+  339  ansible-playbook deply_index_html.yml
+  340  cd host_vars/
+  341  vi centos01 
+  342  ansible-playbook deply_index_html.yml
+  343  cd ../
+  344  ansible-playbook deply_index_html.yml
+  345  vi centos01 
+  346  vi dev_index.html 
+  347  cd host_vars/
+  348  ls -altr
+  349  vi centos01 
+  350  ls
+  351  cd ..
+  352  ls -altr
+  353  vi deply_index_html.yml 
+  354  ansible-playbook deply_index_html.yml
+  355  cat hosts
+  356  ls
+  357  cat dev_index.html 
+  358  vi deply_index_html.yml 
+  359  ansible-playbook deply_index_html.yml
+  360  vi deply_index_html.yml 
+  361  vi dev_index.html prod_index.html 
+  362  ansible-playbook deply_index_html.yml
+  363  cd group_vars/
+  364  ls
+  365  vi centos 
+  366  cd ../
+  367  cd host_vars/
+  368  vi centos01 
+  369  cd ../group_vars/
+  370  vi centos 
+  371  ansible-playbook deply_index_html.yml
+  372  cd ..
+  373  ansible-playbook deply_index_html.yml
+  374  cd host_vars/
+  375  cd ../
+  376  vi host_vars/centos01 
+  377  vi host_vars/centos01 -vvv
+  378  ansible-playbook deply_index_html.yml -vvv
+  379  cd group_vars/
+  380  ls
+  381  vi centos 
+  382  vi ubuntu
+  383  ls
+  384  cd ../host_vars/
+  385  ls
+  386  mv centos01 ..
+  387  cd ..
+  388  ls
+  389  vi cp centos01 host_vars/
+  390  cp centos01 host_vars/
+  391  cd host_vars/
+  392  cp -rp centos01 ubuntu01
+  393  vi Ã*
+  394  vi *
+  395  lq
+  396  ls -altr
+  397  vi centos01 
+  398  vi ubuntu01 
+  399  cat *
+  400  ls -altr
+  401  rm ./?*
+  402  ls -altr
+  403  vi centos01 ubuntu01 
+  404  cat *
+  405  ls -altr
+  406  cd ../group_vars/
+  407  ls -altr
+  408  cat centos  ubuntu 
+  409  vi ubuntu 
+  410  cd ..
+  411  ls
+  412  cp -rp deply_index_html.yml check_service.yml
+  413  vi check_service.yml 
+  414  cat hosts
+  415  vi check_service.yml 
+  416  ls
+  417  cat mysql_1.yml
+  418  vi check_service.yml 
+  419  ansible-playbook check_service.yml 
+  420  vi check_service.yml 
+  421  ansible-playbook check_service.yml 
+  422  vi check_service.yml 
+  423  ansible-playbook check_service.yml 
+  424  vi check_service.yml 
+  425  ansible-playbook check_service.yml 
+  426  vi check_service.yml 
+  427  ansible-playbook check_service.yml 
+  428  ansible-playbook check_service.yml  --syntax-check
+  429  vi check_service.yml 
+  430  ansible-playbook check_service.yml  --syntax-check
+  431  vi check_service.yml 
+  432  ansible-playbook check_service.yml  --syntax-check
+  433  ansible-playbook check_service.yml
+  434  ansible-playbook check_service.yml -v
+  435  ls
+  436  cp -rp check_service.yml check-sshd.yml
+  437  mv check-sshd.yml check_sshd.yml
+  438  vi check_sshd.yml 
+  439  cd group_vars/
+  440  ls
+  441  cp -rp ubuntu demo_serves
+  442  vi demo_serves 
+  443  cd ../host_vars/
+  444  ls -altr
+  445  vi *
+  446  ls -altr
+  447  cd ..
+  448  ls -altr
+  449  vi check_sshd.yml 
+  450  ansible-playbook check_sshd.yml 
+  451  cat check_sshd.yml 
+  452  cat group_vars/demo_serves 
+  453  git add .
+  454  git commit -m "restart service according"
+  455  git status
+  456  git push origin master
+  457  vi register_var.yml
+  458  ls -altr
+  459  git add .
+  460  git commit -m "restart service according"
+  461  git push origin master
+  462  ls
+  463  ansible-playbook register_var.yml 
+  464  vi register_var.yml 
+  465  ansible-playbook register_var.yml 
+  466  vi register_var.yml 
+  467  ansible-playbook register_var.yml 
+  468  vi register_var.yml 
+  469  ansible-playbook register_var.yml 
+  470  vi register_var.yml 
+  471  ansible-playbook register_var.yml 
+  472  vi register_var.yml 
+  473  ansible-playbook register_var.yml 
+  474  ansible centos01 -m setup
+  475  ansible all -m setup -a 'filter=ansible_*_mb'
+  476  ansible all -m setup [ grep distribu
+  477  ansible cento01 -m setup [ grep distribu
+  478  ansible centos01 -m setup [ grep distribu
+  479  ansible centos01 -m setup 
+  480  vi facts.yml
+  481  ansible-playbook facts.yml
+  482  vi facts.yml
+  483  ansible-playbook facts.yml
+  484  vi facts.yml
+  485  ansible-playbook facts.yml
+  486  vi facts.yml
+  487  ansible-playbook facts.yml
+  488  vi facts.yml
+  489  ansible-playbook facts.yml
+  490  vi facts.yml
+  491  ansible-playbook facts.yml
+  492  vi facts.yml
+  493  ansible-playbook facts.yml
+  494  vi facts.yml
+  495  ansible-playbook facts.yml
+  496  vi facts.yml
+  497  ansible-playbook facts.yml
+  498  vi facts.yml
+  499  ansible-playbook facts.yml
+  500  vi facts.yml
+  501  ansible-playbook facts.yml
+  502  vi facts.yml
+  503  ansible-playbook facts.yml
+  504  vi facts.yml
+  505  ansible-playbook facts.yml  --syntax-check
+  506  ansible-playbook facts.yml
+  507  ls
+  508  ansible-playbook facts.yml
+  509  vi facts.yml
+  510  cd host_vars/
+  511  ls
+  512  mv centos01 ..
+  513  cd ../group_vars/
+  514  ls
+  515  mv centos ../
+  516  cd ..
+  517  ansible-playbook facts.yml
+  518  vi facts.yml 
+  519  ansible-playbook facts.yml
+  520  pwd
+  521  ls
+  522  mv centos01 host_vars/
+  523  ls
+  524  mv centos group_vars/
+  525  ls
+  526  vi facts.yml 
+  527  vi ansible.cfg 
+  528  ansible-playbook facts.yml
+  529  git add .
+  530  git add -all
+  531  git add .
+  532  git status
+  533  gt log
+  534  git log
+  535  set -o vi
+  536  git commit -m "global refersh"
+  537  git push origin master
+  538  my_token.txt
+  539  vi my_git_token.txt
+  540  git push origin master
+  541  vi check_services/yml
+  542  vi check_services.yml
+  543  mv check_service.yml loo1.ymlm
+  544  mv loo1.ymlm loo1.yml
+  545  $ansible-playbook loo1.yml 
+  546  ansible-playbook loo1.yml 
+  547  vi loo1.yml 
+  548  ansible-playbook loo1.yml 
+  549  vi loo1.yml 
+  550  ansible-playbook loo1.yml 
+  551  vi loo1.yml 
+  552  ansible-playbook loo1.yml 
+  553  vi loo1.yml 
+  554  ansible-playbook loo1.yml 
+  555  vi loo1.yml 
+  556  cp -rp loo1.yml loop1.yml
+  557  vi loop1.yml 
+  558  ansible-playbook loop1.yml 
+  559  vi hash_demo.yml
+  560  ls -altr
+  561  cp -rp loop1.yml hash.yml
+  562  vi hash.yml 
+  563  ls -altr
+  564  ansible-playbook hash.yml 
+  565  ls -altr
+  566  vi hash.yml 
+  567  ansible-playbook hash.yml --syntax-check
+  568  vi hash.yml 
+  569  ansible-playbook hash.yml --syntax-check
+  570  ansible-playbook hash.yml 
+  571  ls -altr
+  572  vi loop1.yml 
+  573  git add .
+  574  git status
+  575  git commit -m "loop instruction"
+  576  git push origin master
+  577  ansible-playbook hash.yml -v
+  578  ansible-playbook hash.yml -vv
+  579  ansible-playbook hash.yml -vvv
+  580  ansible-playbook hash.yml -vvvv
+  581  ansible-playbook hash.yml -vvvvv
+  582  ansible-playbook hash.yml -vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+  583  vi hash.yml 
+  584  ansible-playbook hash.yml 
+  585  vi hash.yml 
+  586  ansible-playbook hash.yml 
+  587  ls
+  588  cd host_vars/
+  589  ls
+  590  vi centos01 
+  591  ls
+  592  vi centos01 ubuntu01 
+  593  cd ../
+  594  vi group_vars/*
+  595  cd group_vars/
+  596  ls -altr
+  597  vi centos 
+  598  ls
+  599  vi demo_serves 
+  600  vi ubuntu 
+  601  cd ../host_vars/
+  602  vi *
+  603  vi ftpserver.yml
+  604  c
+  605  ls
+  606  mv ftpserver.yml ..
+  607  ls
+  608  cd ../group_vars/
+  609  vi demo_serves 
+  610  cd ..
+  611  ansible-playbook ftpserver.yml 
+  612  git add .
+  613  git status
+  614  git commit -m "loop instructionA"
+  615  git status
+  616  git push origin master
+  617  cp -rp ftpserver.yml ftpserver_2.yml
+  618  vi ftpserver_2.yml 
+  619  ansible-playbook ftpserver_2.yml 
+  620  git status
+  621  git add .
+  622  git commit -m "loop instructionA_1"
+  623  git push origin master
+  624  ansible all -m setup -a "filter=ansible_*_mb"
+  625  ls -altr
+  626  vi mariadb.yml
+  627  ansible all -m setup -a "filter=ansible_*_mb"
+  628  ansible all -m setup -a "filter=ansible_*_mb"    | grep memtotal
+  629  cat mariadb.yml 
+  630  ansible-playbook mariadb.yml 
+  631  cat mariadb.yml 
+  632  cd /etc
+  633  ls
+  634  cd htppd
+  635  ls htt*
+  636  cd
+  637  cd ansible/
+  638  ls
+  639  ls1
+  640  scp 10.0.0.21:/etc/htppd/conf/httpd.conf .
+  641  scp 10.0.0.21:/etc/httpd/conf/httpd.conf .
+  642  ls -altr
+  643  vi httpd.conf 
+  644  vi handler.yml
+  645  vi httpd.conf 
+  646  ls -altr
+  647  yum
+  648  ls
+  649  ls -altr
+  650  ansible-playbook handler.yml 
+  651  vi handler.yml 
+  652  ansible-playbook handler.yml 
+  653  vi handler.yml 
+  654  ansible-playbook handler.yml 
+  655  vi handler.yml 
+  656  ansible-playbook handler.yml 
+  657  vi index.html.j2
+  658  vi test_server.yml
+  659  cat index.html
+  660  cat index.html.j2 
+  661* l
+  662* 
+  663  ansible all -m setup -a "filter=ansible_os_family" 
+  664  ansible-playbook test_server.yml 
+  665  vi  test_server.yml 
+  666  ansible-playbook test_server.yml 
+  667  vi  test_server.yml 
+  668  vi test_server.yml
+  669  ls -altr
+  670  vi index.html.j2 
+  671  vi test_server.yml
+  672  ansible-playbook test_server.yml 
+  673  vi test_server.yml
+  674  git add .
+  675  git commit -m "loop instructionA_1_template"
+  676  git push origin master
+  677  vi index.html.j2 
+  678  ls -altr
+  679  history > history.txt
+  680  ls -altr
+  681  git add .
+  682  git status
+  683  git commit -m "loop instructionA_1_fin"
+  684  git push origin master
+  685  history > history1.txt
