@@ -8,6 +8,7 @@
       name: "{{item.name}}" 
       groups: "{{item.groups}}" 
       state: present
+      comment: "{{item.commentaire}}"
     loop:
-    - { name: 'jane',groups: 'wheel' }
-    - { name: 'joe',groups: 'root' }
+    - { name: 'janexxx1',groups: 'wheel',commentaire: 'Joe Doe' }
+    - { name: 'joexxxx1',groups: 'root', commentaire: 'KKKKK' }
