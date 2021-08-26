@@ -1,0 +1,37 @@
+---
+- name: install mysql
+  hosts: ubuntu
+  become: yes
+  tasks:
+
+  - name: drop database
+    mysql_db:
+      name: mysqldb
+      login_user: root
+      login_password: Azerty01
+      state: absent
+
+  - name: delete user mysql
+    mysql_user:
+      name: admin
+      password: password
+      login_user: root
+      login_password: Azerty01
+      priv: "*.*:ALL,GRANT"
+      state: absent
+
+  - name: stop the MySQL service
+    service:
+      name: mysql
+      state: stopped 
+
+  - name: De-Intall python-mysqldb
+    apt:
+     name: python-mysqldb
+     state: absent
+
+  - name: De-Install mysql-server
+    apt:
+     name: mysql-server
+     update_cache: yes
+     state: absent

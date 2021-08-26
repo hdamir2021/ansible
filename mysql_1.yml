@@ -1,0 +1,35 @@
+---
+- name: install mysql
+  hosts: ubuntu
+  become: yes
+  tasks:
+  - name: Install mysql-server
+    apt:
+     name: mysql-server
+     update_cache: yes 
+     state: present
+
+  - name: Install python-mysqldb for mysql_user and mysql_db modules
+    apt: 
+     name: python-mysqldb 
+     state: present
+
+  - name: Start the MySQL service
+    service:
+      name: mysql
+      state: restarted
+      enabled: true
+
+  - name: Create user mysql
+    mysql_user:
+      name: admin
+      password: password
+      login_user: root
+      login_password: Azerty01
+      priv: "*.*:ALL,GRANT"
+
+  - name: create database
+    mysql_db:
+      name: mysqldb
+      login_user: root
+      login_password: Azerty01
